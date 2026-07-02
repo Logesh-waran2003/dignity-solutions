@@ -3,819 +3,646 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrise – BPO Solutions | Debt Management & HR Staffing</title>
+  <title>Home - Arrise</title>
   <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Tailwind Output -->
+  <link href="dist/output.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="bg-primary text-white text-sm py-2 hidden md:block">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-    <div class="flex items-center gap-6">
-      <a href="mailto:info@arrisebpo.com" class="flex items-center gap-2 hover:text-secondary transition">
-        <i class="fa-solid fa-envelope"></i> info@arrisebpo.com
-      </a>
-    </div>
-    <div class="flex items-center gap-4">
-      <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </div>
-</div>
-
-<!-- Header / Navigation -->
-<header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
-    <a href="#" class="flex-shrink-0">
-      <img src="images/logo-pdf.png" alt="Arrise" class="h-12">
-    </a>
-    <nav class="hidden lg:flex items-center gap-8">
-      <a href="#" class="font-spartan font-semibold text-dark hover:text-primary transition">Home</a>
-      <div class="relative group">
-        <a href="#" class="font-spartan font-semibold text-dark hover:text-primary transition flex items-center gap-1">
-          Services <i class="fa-solid fa-chevron-down text-xs"></i>
-        </a>
-        <div class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-          <a href="#" class="block px-5 py-2 hover:bg-gray-light hover:text-primary transition">Debt Management Services</a>
-          <a href="#" class="block px-5 py-2 hover:bg-gray-light hover:text-primary transition">HR Staffing Services</a>
+<!-- ========== HEADER ========== -->
+<header class="relative z-50">
+  <div class="bg-white py-4">
+    <div class="container-main">
+      <nav class="flex items-center justify-between">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.jpg" alt="Arrise" class="w-[250px]">
+          </a>
         </div>
-      </div>
-      <a href="#" class="font-spartan font-semibold text-dark hover:text-primary transition">About Us</a>
-      <a href="#" class="font-spartan font-semibold text-dark hover:text-primary transition">Careers</a>
-      <a href="#" class="font-spartan font-semibold text-dark hover:text-primary transition">Contact Us</a>
-    </nav>
-    <!-- Mobile menu button -->
-    <button id="mobile-menu-btn" class="lg:hidden text-dark text-2xl">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t px-4 pb-4">
-    <a href="#" class="block py-3 border-b font-semibold text-dark">Home</a>
-    <a href="#" class="block py-3 border-b font-semibold text-dark">Debt Management Services</a>
-    <a href="#" class="block py-3 border-b font-semibold text-dark">HR Staffing Services</a>
-    <a href="#" class="block py-3 border-b font-semibold text-dark">About Us</a>
-    <a href="#" class="block py-3 border-b font-semibold text-dark">Careers</a>
-    <a href="#" class="block py-3 font-semibold text-dark">Contact Us</a>
+        <!-- Desktop Nav -->
+        <ul class="hidden lg:flex items-center gap-1">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li class="relative group">
+            <a href="#" class="nav-link flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+            <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <li><a href="#" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+              <li><a href="#" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav-link">About Us</a></li>
+          <li><a href="#" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link">Contact Us</a></li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden flex flex-col gap-[5px] cursor-pointer" id="hamburger">
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
 
-<!-- Hero Slider -->
-<section id="hero" class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
-  <div class="slider-container relative w-full h-full">
-    <!-- Slides -->
-    <div class="slide absolute inset-0 transition-opacity duration-1000" data-index="0">
-      <img src="images/banner_4.jpg" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 w-full">
-          <h1 class="text-white text-2xl md:text-4xl lg:text-[38px] font-spartan font-semibold leading-tight max-w-[863px] drop-shadow-lg">
-            Empowering Businesses with End-to-End Solutions for Seamless Debt Collections and Strategic Partner Staffing Solutions
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0" data-index="1">
-      <img src="images/banner_2.jpg" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 w-full">
-          <h1 class="text-white text-2xl md:text-4xl lg:text-[38px] font-spartan font-semibold leading-tight max-w-[863px] drop-shadow-lg">
-            Rise Higher Together with Expert Debt Management and Tailored HR Staffing Solutions.
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0" data-index="2">
-      <img src="images/banner_5.png" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 w-full">
-          <h1 class="text-white text-2xl md:text-4xl lg:text-[38px] font-spartan font-semibold leading-tight max-w-[863px] drop-shadow-lg">
-            Transforming Debt Management and Staffing Solutions for a Brighter Tomorrow
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0" data-index="3">
-      <img src="images/us-2.jpg" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 w-full">
-          <h1 class="text-white text-2xl md:text-4xl lg:text-[38px] font-spartan font-semibold leading-tight max-w-[863px] drop-shadow-lg">
-            Unlock Your Potential with Arrise: Tailored Debt Management, and Strategic HR Staffing Solutions
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0" data-index="4">
-      <img src="images/banner_3.jpg" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 w-full">
-          <h1 class="text-white text-2xl md:text-4xl lg:text-[38px] font-spartan font-semibold leading-tight max-w-[863px] drop-shadow-lg">
-            Managing Debt Smarter – Digital, Call Center, and Field Solutions Across India!
-          </h1>
-        </div>
-      </div>
-    </div>
+<!-- Sticky Header -->
+<div class="sticky-header" id="stickyHeader">
+  <div class="container-main py-3">
+    <nav class="flex items-center justify-between">
+      <a href="#"><img src="images/logo.jpg" alt="Arrise" class="w-[250px]"></a>
+      <ul class="hidden lg:flex items-center gap-1">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="nav-link flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+          <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <li><a href="#" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+            <li><a href="#" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
   </div>
-  <!-- Slider Navigation -->
-  <button class="slider-prev absolute left-4 top-1/2 -translate-y-1/2 w-[50px] h-[50px] rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition z-10">
-    <i class="fa-solid fa-chevron-left"></i>
-  </button>
-  <button class="slider-next absolute right-4 top-1/2 -translate-y-1/2 w-[50px] h-[50px] rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition z-10">
-    <i class="fa-solid fa-chevron-right"></i>
-  </button>
-  <div class="slider-dots absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-    <button class="slider-dot active" data-index="0"></button>
-    <button class="slider-dot" data-index="1"></button>
-    <button class="slider-dot" data-index="2"></button>
-    <button class="slider-dot" data-index="3"></button>
-    <button class="slider-dot" data-index="4"></button>
+</div>
+
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-white z-[1000] translate-x-full transition-transform duration-300" id="mobileMenu">
+  <div class="flex justify-end p-4">
+    <button id="closeMenu" class="text-2xl text-dark">&times;</button>
+  </div>
+  <ul class="flex flex-col items-center gap-4 mt-10">
+    <li><a href="#" class="text-lg font-medium text-dark">Home</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Services</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">About Us</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Careers</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- ========== HERO SLIDER ========== -->
+<section class="hero-slider relative">
+  <div class="hero-slide active">
+    <img src="images/banner_4.jpg" alt="Banner">
+    <div class="overlay"></div>
+    <div class="slide-text">Empowering Businesses with End-to-End Solutions for Seamless Debt Collections and Strategic Partner Staffing Solutions</div>
+  </div>
+  <div class="hero-slide">
+    <img src="images/banner_2.jpg" alt="Banner">
+    <div class="overlay"></div>
+    <div class="slide-text">Rise Higher Together with Expert Debt Management and Tailored HR Staffing Solutions.</div>
+  </div>
+  <div class="hero-slide">
+    <img src="images/banner_5.png" alt="Banner">
+    <div class="overlay"></div>
+    <div class="slide-text">Transforming Debt Management and Staffing Solutions for a Brighter Tomorrow</div>
+  </div>
+  <div class="hero-slide">
+    <img src="images/us-2.jpg" alt="Banner">
+    <div class="overlay"></div>
+    <div class="slide-text">Unlock Your Potential with Arrise: Tailored Debt Management, and Strategic HR Staffing Solutions</div>
+  </div>
+  <div class="hero-slide">
+    <img src="images/banner_3.jpg" alt="Banner">
+    <div class="overlay"></div>
+    <div class="slide-text">Managing Debt Smarter – Digital, Call Center, and Field Solutions Across India!</div>
+  </div>
+
+  <!-- Slider Arrows -->
+  <div class="absolute left-5 top-1/2 -translate-y-1/2 z-10">
+    <button class="slider-arrow" id="prevSlide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+  </div>
+  <div class="absolute right-5 top-1/2 -translate-y-1/2 z-10">
+    <button class="slider-arrow" id="nextSlide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Wave Brush Bottom -->
+  <div class="wave-brush-bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
+      <path class="elementor-shape-fill" d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z"/>
+      <path class="elementor-shape-fill" d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C267.7,18.8,269.7,18,269.6,18z"/>
+      <path class="elementor-shape-fill" d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2S227.6,9.9,227.4,9.8z"/>
+      <path class="elementor-shape-fill" d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4C206.4,12.9,204.6,13.5,204.5,13.4z"/>
+      <path class="elementor-shape-fill" d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6S201,10.7,201,10.6z"/>
+      <path class="elementor-shape-fill" d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C152.6,27.5,154.6,26.8,154.5,26.7z"/>
+      <path class="elementor-shape-fill" d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z"/>
+      <path class="elementor-shape-fill" d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0C76.9,11.5,75.3,12.5,75.5,12.6z"/>
+      <path class="elementor-shape-fill" d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4C19.9,13.7,15.7,13.3,15.6,13.2z"/>
+    </svg>
   </div>
 </section>
 
-<!-- About / Empower Section -->
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <p class="section-subtitle">Empower Your Business With Top-Tier</p>
-        <h2 class="section-title">BPO Solutions</h2>
-        <p class="text-text-body leading-relaxed mb-6">
-          At Arrise, we believe in empowering your business to achieve greater heights. Through our expert Debt Management and strategic HR Staffing Solutions, we partner with you to enhance efficiency, drive growth, and create lasting success. As a dynamic BPO services company, we're dedicated to delivering unmatched service across sectors, reshaping customer engagement with precision and passion. By leveraging cutting-edge technology, we not only streamline operations but also elevate success rates. Together, we rise higher, navigating challenges and seizing opportunities with a unified vision. Let's elevate your business to its full potential.
-        </p>
-      </div>
-      <div class="grid grid-cols-2 gap-6">
-        <!-- Why choose local vendors -->
-        <div class="bg-gray-light rounded-lg p-6">
-          <h3 class="text-lg font-bold text-dark mb-4">Why choose local vendors and remain stagnant?</h3>
-          <ul class="space-y-2 text-sm text-text-body">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Physical collections as the main focus</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> A small, local team</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Adhoc process</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Lack of ownership</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Best effort basis</li>
-          </ul>
-        </div>
-        <!-- When you can choose Arrise -->
-        <div class="bg-primary rounded-lg p-6 text-white">
-          <h3 class="text-lg font-bold text-white mb-4">When you can choose to excel with Arrise</h3>
-          <ul class="space-y-2 text-sm">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1"></i> Nationwide BPM operations</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1"></i> Expert team in banking and fintech</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1"></i> Digitally led by Spocto</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1"></i> ESAU Matrix performance-driven</li>
-          </ul>
-        </div>
-      </div>
+<!-- ========== EMPOWER SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section" data-aos="fade-up">
+      <div class="heading_text">Empower Your Business With Top-Tier <br> BPO Solutions</div>
+      <p class="description_text">At Arrise, we believe in empowering your business to achieve greater heights. Through our expert Debt Management and strategic HR Staffing Solutions, we partner with you to enhance efficiency, drive growth, and create lasting success. As a dynamic BPO services company, we're dedicated to delivering unmatched service across sectors, reshaping customer engagement with precision and passion. By leveraging cutting-edge technology, we not only streamline operations but also elevate success rates. Together, we rise higher, navigating challenges and seizing opportunities with a unified vision. Let's elevate your business to its full potential.</p>
     </div>
   </div>
 </section>
 
-<!-- NextGen Outsourcing / Services -->
-<section class="py-16 md:py-24 bg-gray-light relative">
-  <div class="absolute inset-0 opacity-[0.13]" style="background-image: url('images/pattern.jpg'); background-size: contain; background-repeat: repeat;"></div>
-  <div class="relative max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="text-primary font-medium text-sm tracking-wider mb-2">Arrise of the NextGen Outsourcing Services</p>
-      <p class="text-text-body max-w-2xl mx-auto">Our mission is to empower you to operate a world-class business through our exceptional services. Each interaction is guided by expertise to ensure swift resolutions and guarantee customer satisfaction.</p>
+<!-- ========== SERVICES SECTION ========== -->
+<section class="py-20 bg-gray-light relative">
+  <!-- Wave Brush Bottom -->
+  <div class="wave-brush-bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
+      <path class="elementor-shape-fill" d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z"/>
+      <path class="elementor-shape-fill" d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C267.7,18.8,269.7,18,269.6,18z"/>
+      <path class="elementor-shape-fill" d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2S227.6,9.9,227.4,9.8z"/>
+      <path class="elementor-shape-fill" d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4C206.4,12.9,204.6,13.5,204.5,13.4z"/>
+      <path class="elementor-shape-fill" d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6S201,10.7,201,10.6z"/>
+      <path class="elementor-shape-fill" d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C152.6,27.5,154.6,26.8,154.5,26.7z"/>
+      <path class="elementor-shape-fill" d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z"/>
+      <path class="elementor-shape-fill" d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0C76.9,11.5,75.3,12.5,75.5,12.6z"/>
+      <path class="elementor-shape-fill" d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4C19.9,13.7,15.7,13.3,15.6,13.2z"/>
+    </svg>
+  </div>
+
+  <div class="container-main">
+    <!-- Section Heading -->
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Arrise of the <span class="text-primary">NextGen</span> Outsourcing Services</div>
+      <p class="description_text">Our mission is to empower you to operate a world-class business through our exceptional services. Each interaction is guided by expertise to ensure swift resolutions and guarantee customer satisfaction.</p>
     </div>
+
+    <!-- Service Boxes -->
     <div class="grid md:grid-cols-2 gap-8">
-      <!-- Debt Management -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-        <div class="h-64 overflow-hidden">
-          <img src="images/debt_collector1.jpg" alt="Debt Management Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      <div class="service-box" data-aos="fade-up" data-aos-delay="0">
+        <div class="image">
+          <img src="images/debt_collector1.jpg" alt="Debt Management Services">
         </div>
-        <div class="p-8">
-          <h3 class="text-xl font-bold text-dark mb-3">
-            <a href="#" class="hover:text-primary transition">Debt Management Services</a>
-          </h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4">
-            Our Debt management services are designed to streamline and enhance your debt recovery and resolution processes, ensuring efficiency and compliance every step of the way. By partnering with us, you gain access to expert solutions tailored to reduce delinquencies, improve collections, and foster positive customer relationships.
-          </p>
-          <a href="#" class="btn-primary text-xs">Know More</a>
+        <div class="content-inner">
+          <h2><a href="#">Debt Management Services</a></h2>
+          <p>Our Debt management services are designed to streamline and enhance your debt recovery and resolution processes, ensuring efficiency and compliance every step of the way. By partnering with us, you gain access to expert solutions tailored to reduce delinquencies, improve collections, and foster positive customer relationships.</p>
+          <a href="#" class="read_more">Know more</a>
         </div>
       </div>
-      <!-- HR Solutions -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-        <div class="h-64 overflow-hidden">
-          <img src="images/hire.jpg" alt="Hire to Retire Solutions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      <div class="service-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="image">
+          <img src="images/hire.jpg" alt="Hire to Retire Solutions">
         </div>
-        <div class="p-8">
-          <h3 class="text-xl font-bold text-dark mb-3">
-            <a href="#" class="hover:text-primary transition">Hire to Retire Solutions</a>
-          </h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4">
-            Our Hire to retire solutions provide end-to-end workforce management, covering every stage of the employee lifecycle. From recruitment and onboarding to retirement and succession planning, we ensure your employees are supported throughout their journey.
-          </p>
-          <a href="#" class="btn-primary text-xs">Know More</a>
+        <div class="content-inner">
+          <h2><a href="#">Hire to Retire Solutions</a></h2>
+          <p>Our Hire to retire solutions provide end-to-end workforce management, covering every stage of the employee lifecycle. From recruitment and onboarding to retirement and succession planning, we ensure your employees are supported throughout their journey.</p>
+          <a href="#" class="read_more">Know more</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Features / Why Choose Us -->
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="section-subtitle">Unmatched Expertise for Exceptional Business Results</p>
-      <p class="text-text-body max-w-2xl mx-auto">Arrise stands as a trusted partner, poised to soar above expectations and redefine outsourcing excellence.</p>
+<!-- ========== EXPERTISE SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <!-- Section Heading -->
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Unmatched Expertise for Exceptional Business Results</div>
+      <p class="description_text">Arrise stands as a trusted partner, poised to soar above expectations and redefine outsourcing excellence.</p>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Feature 1 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/link-1.png" alt="Expert Teams" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Expert<br>Teams</h4>
-        <p class="text-text-body text-sm">Our highly seasoned banking professionals, experienced in debt recovery and management, deliver expert solutions that drive results.</p>
+
+    <!-- Image Boxes Row 1 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div class="image-box" data-aos="fade-up" data-aos-delay="0">
+        <img src="images/link-1.png" alt="Expert Teams">
+        <h3>Expert <br>Teams</h3>
+        <p>Our highly seasoned banking professionals, experienced in debt recovery and management, deliver expert solutions that drive results.</p>
       </div>
-      <!-- Feature 2 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/cell.png" alt="Nationwide Presence" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Nationwide Presence</h4>
-        <p class="text-text-body text-sm">With a robust network across India, we offer seamless debt management solutions that cover every region, ensuring extensive reach and accessibility.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/cell.png" alt="Nationwide Presence">
+        <h3>Nationwide Presence</h3>
+        <p>With a robust network across India, we offer seamless debt management solutions that cover every region, ensuring extensive reach and accessibility.</p>
       </div>
-      <!-- Feature 3 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/agile.png" alt="Agility & Scalability" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Agility & Scalability</h4>
-        <p class="text-text-body text-sm">Whether managing a few accounts or scaling up to handle large volumes, our flexible infrastructure adapts to your needs, ensuring consistent performance.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/agile.png" alt="Agility & Scalability">
+        <h3>Agility & Scalability</h3>
+        <p>Whether managing a few accounts or scaling up to handle large volumes, our flexible infrastructure adapts to your needs, ensuring consistent performance.</p>
       </div>
-      <!-- Feature 4 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/compliance-document.png" alt="Compliance First" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Compliance<br>First</h4>
-        <p class="text-text-body text-sm">We maintain strict adherence to legal and regulatory frameworks, giving you peace of mind that all debt management processes are compliant and risk-free.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/compliance-document.png" alt="Compliance First">
+        <h3>Compliance <br> First</h3>
+        <p>We maintain strict adherence to legal and regulatory frameworks, giving you peace of mind that all debt management processes are compliant and risk-free.</p>
       </div>
-      <!-- Feature 5 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/transformation.png" alt="Digital-Led Solutions" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Digital-Led Solutions</h4>
-        <p class="text-text-body text-sm">We leverage cutting-edge technology to optimize debt management, ensuring efficiency, transparency, and real-time insights through our digital platforms.</p>
+    </div>
+
+    <!-- Image Boxes Row 2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="image-box" data-aos="fade-up" data-aos-delay="0">
+        <img src="images/transformation.png" alt="Digital-Led Solutions">
+        <h3>Digital-Led Solutions</h3>
+        <p>We leverage cutting-edge technology to optimize debt management, ensuring efficiency, transparency, and real-time insights through our digital platforms.</p>
       </div>
-      <!-- Feature 6 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/performance.png" alt="Performance-Driven" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Performance-Driven Approach</h4>
-        <p class="text-text-body text-sm">Our focus on measurable outcomes ensures that every strategy we implement is geared toward maximizing recovery and minimizing delinquency rates.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/performance.png" alt="Performance-Driven Approach">
+        <h3>Performance-Driven Approach</h3>
+        <p>Our focus on measurable outcomes ensures that every strategy we implement is geared toward maximizing recovery and minimizing delinquency rates.</p>
       </div>
-      <!-- Feature 7 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/live-chat.png" alt="Going the Extra Mile" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">Going the Extra<br>Mile</h4>
-        <p class="text-text-body text-sm">At the heart of our services is a customer-first approach. We go beyond standard expectations to ensure optimal recovery, seamless customer interaction, and superior service delivery.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/live-chat.png" alt="Going the Extra Mile">
+        <h3>Going the Extra <br> Mile</h3>
+        <p>At the heart of our services is a customer-first approach. We go beyond standard expectations to ensure optimal recovery, seamless customer interaction, and superior service delivery.</p>
       </div>
-      <!-- Feature 8 -->
-      <div class="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 group border border-transparent hover:border-gray-100">
-        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-          <img src="images/iso-symbol.png" alt="ISO Certified" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform">
-        </div>
-        <h4 class="font-spartan font-bold text-dark text-base mb-2">ISO Certified Excellence</h4>
-        <p class="text-text-body text-sm">Our commitment to quality and compliance is backed by ISO certifications of - 9001 & 27001, ensuring the highest standards in every aspect of our operations.</p>
+      <div class="image-box" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/iso-symbol.png" alt="ISO Certified Excellence">
+        <h3>ISO Certified Excellence</h3>
+        <p>Our commitment to quality and compliance is backed by ISO certifications of - 9001 & 27001, ensuring the highest standards in every aspect of our operations.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Reasons / Competitive Edge -->
-<section class="py-16 md:py-24 bg-dark text-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-white text-3xl md:text-4xl font-spartan font-bold mb-4">Reasons Why Leading Financial Companies Partner With Us</h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">At the core of our success lies a competitive edge that drives exceptional results. Here's how we stand out:</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Unique synergy of digital, tele-calling, and FOS capabilities</p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Superior traceability results powered by AI/ML-driven Smart IVR and Smart SMS</p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Pan-India reach with more than 72% pin code coverage</p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Dynamic leadership team with deep expertise in banking, NBFC, Fintech and MFI sectors</p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Digital collections platform powered by a market leading solution</p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition cursor-pointer">
-        <p class="text-sm text-gray-200">Results-driven performance strategy focused on efficiency, satisfaction, agility and utility</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Banking & Financial Services -->
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
+<!-- ========== WHY PARTNER SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(rgba(20,29,56,0.85), rgba(20,29,56,0.85)), url('images/pattern.jpg') center/cover;">
+  <div class="container-main">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="section-title">Arrise for the Banking & Financial Services Industry</h2>
-        <p class="text-text-body leading-relaxed mb-6">
-          Debt collection companies face intricate regulatory compliance challenges, and our combined experience of over 250 years positions us as industry leaders. Additionally, our team of over 5,000 debt management agents leverages expert negotiation skills, paired with empathy, to drive successful debt recovery.
-        </p>
-        <p class="text-text-body leading-relaxed">
-          Arrise empowers the banking and financial services sectors with tailored debt management solutions. Through advanced technology and customized strategies, we enhance collections efficiency and streamline operations—ensuring sustained growth and long-term success for your business.
-        </p>
-      </div>
-      <div class="relative">
-        <img src="images/telemarketer.jpg" alt="Telemarketer" class="rounded-xl shadow-xl w-full">
-        <div class="absolute -bottom-4 -left-4 bg-primary p-3 rounded-lg shadow-lg">
-          <img src="images/bank-teller.png" alt="Banking" class="w-16 h-16">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Stats / Counter Section -->
-<section class="py-16 bg-primary relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10" style="background-image: url('images/pattern.jpg'); background-size: contain;"></div>
-  <div class="relative max-w-7xl mx-auto px-4">
-    <div class="text-center mb-10">
-      <h2 class="text-white text-3xl md:text-4xl font-spartan font-bold">Proudly Leading with Unmatched<br>Operational Scale</h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white">
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1" data-target="50">0 +</div>
-        <p class="text-sm text-white/80">Number of unique processes handled</p>
-      </div>
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1" data-target="5">0 Mn +</div>
-        <p class="text-sm text-white/80">Calls handled every month</p>
-      </div>
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1" data-target="500">0 K +</div>
-        <p class="text-sm text-white/80">Visits by field agents every month</p>
-      </div>
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1" data-target="30">0 +</div>
-        <p class="text-sm text-white/80">Clients</p>
-      </div>
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1">15000 + Cr</div>
-        <p class="text-sm text-white/80">Assets under management per month</p>
-      </div>
-      <div class="counter-box">
-        <div class="text-3xl md:text-4xl font-bold font-spartan mb-1"><i class="fa-solid fa-check-circle text-secondary"></i></div>
-        <p class="text-sm text-white/80">Digital lending partner</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="py-16 md:py-24 bg-gray-light">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="section-subtitle">Testimonial</p>
-      <h2 class="section-title">Words From Our Customers</h2>
-      <p class="text-text-body max-w-2xl mx-auto">Which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Testimonial 1 -->
-      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="text-text-body text-sm mb-6 italic">You bring tremendous value to company. We have generated more leads in the last 45 days than the last 2 days ...</p>
-        <div class="flex items-center gap-4">
-          <img src="images/testi-1.png" alt="Fleix Everard" class="w-14 h-14 rounded-full object-cover">
-          <div>
-            <h5 class="font-bold text-dark text-sm">Fleix Everard</h5>
-            <p class="text-xs text-text-body">HR, Blue Soft Sol</p>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="text-text-body text-sm mb-6 italic">I love creote everyone has been great to work with and you're all great partner for company, we thank you ...</p>
-        <div class="flex items-center gap-4">
-          <img src="images/testi-2.png" alt="Boris Elbert" class="w-14 h-14 rounded-full object-cover">
-          <div>
-            <h5 class="font-bold text-dark text-sm">Boris Elbert</h5>
-            <p class="text-xs text-text-body">Green Tech</p>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="text-text-body text-sm mb-6 italic">We hired creote to assist us with refining marketing plans, you truly understands & gave us very good ideas.</p>
-        <div class="flex items-center gap-4">
-          <img src="images/testi-3.png" alt="Ivor Herbert" class="w-14 h-14 rounded-full object-cover">
-          <div>
-            <h5 class="font-bold text-dark text-sm">Ivor Herbert</h5>
-            <p class="text-xs text-text-body">Manager, Airlines</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Client Logos Marquee -->
-<section class="py-12 bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="relative overflow-hidden">
-      <div class="marquee-track flex items-center gap-12 w-max">
-        <img src="images/icici.png" alt="ICICI" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/axis.png" alt="Axis" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/bajaj.png" alt="Bajaj" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/dubai.png" alt="Dubai" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/tb_logo.png" alt="TB" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/toyota.png" alt="Toyota" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/yesbank.png" alt="Yes Bank" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/rbl-1.png" alt="RBL" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/sbi.png" alt="SBI" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/tata.png" alt="Tata" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/rak.png" alt="RAK" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <!-- Duplicate for seamless loop -->
-        <img src="images/icici.png" alt="ICICI" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/axis.png" alt="Axis" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/bajaj.png" alt="Bajaj" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/dubai.png" alt="Dubai" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/tb_logo.png" alt="TB" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/toyota.png" alt="Toyota" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/yesbank.png" alt="Yes Bank" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/rbl-1.png" alt="RBL" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/sbi.png" alt="SBI" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/tata.png" alt="Tata" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-        <img src="images/rak.png" alt="RAK" class="h-12 object-contain grayscale hover:grayscale-0 transition">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Form Section -->
-<section class="py-16 md:py-24 bg-gray-light">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <img src="images/reach-us-2.png" alt="Get in touch" class="w-full max-w-md mx-auto">
-      </div>
-      <div>
-        <h2 class="section-title">Get in touch now</h2>
-        <form class="space-y-4">
-          <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
-          <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
-          <input type="tel" placeholder="Phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
-          <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-text-body">
-            <option>Debt Management Services</option>
-            <option>HR Staffing Services</option>
-            <option>Business Process Management</option>
-            <option>Others</option>
-          </select>
-          <textarea placeholder="Message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"></textarea>
-          <button type="submit" class="btn-primary">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing Section -->
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="section-subtitle">Choose Your Plan</p>
-      <h2 class="section-title">Adaptable Pricing</h2>
-      <p class="text-text-body max-w-2xl mx-auto">Which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-      <!-- Basic -->
-      <div class="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-xl transition-shadow relative">
-        <span class="text-xs font-semibold text-primary uppercase tracking-wider">Recommended</span>
-        <h3 class="font-spartan font-bold text-2xl text-dark mt-2">Basic Pack</h3>
-        <div class="my-6">
-          <span class="text-4xl font-bold text-dark">22$</span>
-          <span class="text-text-body text-sm"> / Year</span>
-        </div>
-        <p class="text-text-body text-sm mb-6">Power of choice is untrammelled and do what we like best.</p>
-        <ul class="space-y-3 text-sm text-text-body mb-8 text-left">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> 4-5 Weeks from to finish</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Organisational Strategy</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> 20 Days of support</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Data sprint Results revision</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Data sprint Results revision</li>
+      <!-- Left: Text & List -->
+      <div data-aos="fade-up">
+        <h2 class="font-spartan text-white text-[28px] md:text-[34px] font-bold leading-tight mb-4">Reasons Why Leading Financial Companies Partner With Us</h2>
+        <p class="text-gray-300 mb-8">At the core of our success lies a competitive edge that drives exceptional results. Here's how we stand out:</p>
+        <ul class="list-check">
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Unique synergy of digital, tele-calling, and FOS capabilities</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Superior traceability results powered by AI/ML-driven Smart IVR and Smart SMS</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Pan-India reach with more than 72% pin code coverage</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Dynamic leadership team with deep expertise in banking, NBFC, Fintech and MFI sectors</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Digital collections platform powered by a market leading solution</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Results-driven performance strategy focused on efficiency, satisfaction, agility and utility</span></li>
         </ul>
-        <a href="#" class="btn-primary w-full block text-center">Get Started</a>
       </div>
-      <!-- Standard (Featured) -->
-      <div class="bg-primary text-white rounded-xl p-8 text-center shadow-xl relative transform md:-translate-y-4">
-        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Most Recommended</span>
-        <h3 class="font-spartan font-bold text-2xl text-white mt-2">Standard Pack</h3>
-        <div class="my-6">
-          <span class="text-4xl font-bold text-white">59$</span>
-          <span class="text-white/80 text-sm"> / Year</span>
+      <!-- Right: Image -->
+      <div data-aos="fade-in">
+        <img src="images/telemarketer.jpg" alt="Telemarketer" class="rounded-lg shadow-xl w-full">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BANKING & FINANCIAL SECTION ========== -->
+<section class="py-20 bg-gray-light relative">
+  <!-- Wave top -->
+  <div class="wave-brush-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
+      <path class="elementor-shape-fill" d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z"/>
+      <path class="elementor-shape-fill" d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C267.7,18.8,269.7,18,269.6,18z"/>
+      <path class="elementor-shape-fill" d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2S227.6,9.9,227.4,9.8z"/>
+    </svg>
+  </div>
+  <!-- Wave bottom -->
+  <div class="wave-brush-bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
+      <path class="elementor-shape-fill" d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z"/>
+      <path class="elementor-shape-fill" d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3C267.7,18.8,269.7,18,269.6,18z"/>
+      <path class="elementor-shape-fill" d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2S227.6,9.9,227.4,9.8z"/>
+    </svg>
+  </div>
+
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Arrise for the Banking &amp; Financial Services Industry</div>
+      <p class="description_text">Debt collection companies face intricate regulatory compliance challenges, and our combined experience of over 250 years positions us as industry leaders. Additionally, our team of over 5,000 debt management agents leverages expert negotiation skills, paired with empathy, to drive successful debt recovery.</p>
+    </div>
+
+    <!-- Banking Service Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto" data-aos="fade-up">
+      <div class="md:flex">
+        <div class="md:w-1/3 flex items-center justify-center p-8 bg-secondary/5">
+          <img src="images/bank-teller.png" alt="Banking" class="w-32">
         </div>
-        <p class="text-white/80 text-sm mb-6">Matters to principle of selection our pleasures to secure.</p>
-        <ul class="space-y-3 text-sm text-white/90 mb-8 text-left">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> 4-5 Weeks from to finish</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> Organisational Strategy</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> 20 Days of support</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> Data sprint Results revision</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> Data sprint Results revision</li>
+        <div class="md:w-2/3 p-8">
+          <p class="text-text-body leading-relaxed">Arrise empowers the banking and financial services sectors with tailored debt management solutions. Through advanced technology and customized strategies, we enhance collections efficiency and streamline operations—ensuring sustained growth and long-term success for your business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Proudly Leading with Unmatched <br>Operational Scale</div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" data-aos="slide-up">
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter" data-target="60">0</span>+</div>
+        <div class="counter-title">Number of unique <br> processes handled</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter" data-target="15">0</span> Mn+</div>
+        <div class="counter-title">Calls handled every month</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter" data-target="800">0</span>K+</div>
+        <div class="counter-title">Visits by field agents every month</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter" data-target="25">0</span>+</div>
+        <div class="counter-title">Clients</div>
+      </div>
+      <div class="counter-box">
+        <div class="counter-number"><span class="counter" data-target="20000">0</span>+ Cr</div>
+        <div class="counter-title">Assets under management per month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARISON SECTION ========== -->
+<section class="py-20 relative overflow-hidden">
+  <div class="grid lg:grid-cols-2 min-h-[500px]">
+    <!-- Left: Local Vendors -->
+    <div class="relative p-12 lg:p-16 flex flex-col justify-center" style="background: linear-gradient(rgba(71,57,142,0.9), rgba(71,57,142,0.9)), url('images/pattern.jpg') center/cover;">
+      <h2 class="font-spartan text-white text-[26px] md:text-[30px] font-bold mb-8">Why choose local vendors and remain stagnant?</h2>
+      <ul class="comparison-list">
+        <li><i class="fa-regular fa-circle-dot"></i><span>Physical collections as the main focus</span></li>
+        <li><i class="fa-regular fa-circle-dot"></i><span>A small, local team</span></li>
+        <li><i class="fa-regular fa-circle-dot"></i><span>Adhoc process</span></li>
+        <li><i class="fa-regular fa-circle-dot"></i><span>Lack of ownership</span></li>
+        <li><i class="fa-regular fa-circle-dot"></i><span>Best effort basis</span></li>
+      </ul>
+    </div>
+    <!-- Right: Arrise -->
+    <div class="relative p-12 lg:p-16 flex flex-col justify-center" style="background: linear-gradient(rgba(186,27,129,0.9), rgba(186,27,129,0.9)), url('images/pattern.jpg') center/cover;">
+      <h2 class="font-spartan text-white text-[26px] md:text-[30px] font-bold mb-8">When you can choose to excel with Arrise</h2>
+      <div class="arrise-slider">
+        <div class="arrise-slide active-arrise">
+          <h3 class="text-white text-xl font-semibold">Nationwide BPM operations</h3>
+        </div>
+        <div class="arrise-slide">
+          <h3 class="text-white text-xl font-semibold">Expert team in banking and fintech</h3>
+        </div>
+        <div class="arrise-slide">
+          <h3 class="text-white text-xl font-semibold">Digitally led by Spocto</h3>
+        </div>
+        <div class="arrise-slide">
+          <h3 class="text-white text-xl font-semibold">ESAU Matrix performance-driven</h3>
+        </div>
+      </div>
+      <div class="flex gap-3 mt-6">
+        <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition" id="arrisePrev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition" id="arriseNext"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DIGITAL PARTNER SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="heading-section !text-left" data-aos="fade-up">
+        <div class="heading_text">Digital lending partner</div>
+        <p class="description_text !mx-0">Arrise partners with leading digital lending platforms to provide comprehensive debt management solutions, leveraging technology-driven strategies for maximum efficiency and recovery.</p>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="images/truecredits-logo.png" alt="TrueCredits" class="max-w-[300px]">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CLIENT LOGOS ========== -->
+<section class="py-16 bg-gray-light">
+  <div class="container-main overflow-hidden">
+    <div class="flex marquee-track" style="width: max-content;">
+      <div class="flex items-center gap-16 px-8">
+        <img src="images/icici.png" alt="ICICI" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/axis.png" alt="Axis" class="h-10 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/bajaj.png" alt="Bajaj" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/dubai.png" alt="Dubai" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/tb_logo.png" alt="TB" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/toyota.png" alt="Toyota" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/yesbank.png" alt="Yes Bank" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/rbl-1.png" alt="RBL" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/sbi.png" alt="SBI" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/tata.png" alt="Tata" class="h-10 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/rak.png" alt="RAK" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="flex items-center gap-16 px-8">
+        <img src="images/icici.png" alt="ICICI" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/axis.png" alt="Axis" class="h-10 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/bajaj.png" alt="Bajaj" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/dubai.png" alt="Dubai" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/tb_logo.png" alt="TB" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/toyota.png" alt="Toyota" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/yesbank.png" alt="Yes Bank" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/rbl-1.png" alt="RBL" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/sbi.png" alt="SBI" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/tata.png" alt="Tata" class="h-10 object-contain opacity-70 hover:opacity-100 transition">
+        <img src="images/rak.png" alt="RAK" class="h-12 object-contain opacity-70 hover:opacity-100 transition">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / REACH US SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(135deg, #47398E 0%, #BA1B81 100%);">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <h2 class="font-spartan text-white text-[32px] md:text-[38px] font-bold leading-tight mb-6">Ready to Transform Your Business Operations?</h2>
+        <p class="text-white/80 mb-8">Partner with Arrise for unmatched debt management and HR staffing solutions. Let's rise higher together.</p>
+        <a href="#" class="inline-block bg-white text-primary px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider hover:bg-gray-100 transition-all">Contact Us Today</a>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="images/reach-us-2.png" alt="Reach Us" class="max-w-full rounded-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="relative pt-16 pb-8" style="background: linear-gradient(rgba(20,29,56,0.95), rgba(20,29,56,0.95)), url('images/footer-bg.jpg') center/cover;">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1: About -->
+      <div>
+        <img src="images/logo-inverted.png" alt="Arrise" class="w-[200px] mb-6">
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Arrise is a dynamic BPO services company delivering unmatched debt management and HR staffing solutions across sectors.</p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/people/Arrise-BPO-Solutions-PVT-LTD/100084775065264/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+          <a href="https://www.linkedin.com/company/arrise-bpo-solutions-pvt-ltd/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="https://www.instagram.com/arrisebposolutions/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+        </div>
+      </div>
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Debt Management Services</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">HR Staffing Services</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Digital Collections</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Field Operations</a></li>
         </ul>
-        <a href="#" class="inline-block bg-white text-primary px-8 py-3 rounded font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:bg-gray-100 w-full text-center">Get Started</a>
       </div>
-      <!-- Advanced -->
-      <div class="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-xl transition-shadow relative">
-        <span class="text-xs font-semibold text-primary uppercase tracking-wider">Popular Pack</span>
-        <h3 class="font-spartan font-bold text-2xl text-dark mt-2">Advanced Pack</h3>
-        <div class="my-6">
-          <span class="text-4xl font-bold text-dark">99$</span>
-          <span class="text-text-body text-sm"> / Year</span>
-        </div>
-        <p class="text-text-body text-sm mb-6">These cases are perfectly simple & easy to distinguish.</p>
-        <ul class="space-y-3 text-sm text-text-body mb-8 text-left">
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> 4-5 Weeks from to finish</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Organisational Strategy</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> 20 Days of support</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Data sprint Results revision</li>
-          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary"></i> Data sprint Results revision</li>
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Home</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">About Us</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Careers</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Contact Us</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Privacy Policy</a></li>
         </ul>
-        <a href="#" class="btn-primary w-full block text-center">Get Started</a>
+      </div>
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Contact Info</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">Arrise BPO Solutions Pvt. Ltd., India</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-primary mt-1"></i>
+            <a href="mailto:info@arrisebpo.com" class="text-gray-400 text-sm hover:text-primary transition">info@arrisebpo.com</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">Contact us for inquiries</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- FAQ Section -->
-<section class="py-16 md:py-24 bg-gray-light">
-  <div class="max-w-4xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="section-subtitle">General FAQ's</p>
-      <h2 class="section-title">Got Any Questions?</h2>
-    </div>
-    <div class="space-y-4">
-      <!-- FAQ 1 -->
-      <div class="faq-item bg-white rounded-lg shadow-sm active">
-        <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-dark">
-          <span><span class="text-primary mr-2">1</span> How can use content marketing to increase efficient way?</span>
-          <span class="faq-icon text-primary transition-transform duration-300 text-xl">+</span>
-        </button>
-        <div class="faq-answer px-6 pb-4">
-          <p class="text-text-body text-sm">Same as saying through shrinking from toil and pain these cases are perfectly simple and easy to distinguish.</p>
-        </div>
-      </div>
-      <!-- FAQ 2 -->
-      <div class="faq-item bg-white rounded-lg shadow-sm">
-        <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-dark">
-          <span><span class="text-primary mr-2">2</span> How can content marketing help purchase journey?</span>
-          <span class="faq-icon text-primary transition-transform duration-300 text-xl">+</span>
-        </button>
-        <div class="faq-answer px-6 pb-4">
-          <p class="text-text-body text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-      </div>
-      <!-- FAQ 3 -->
-      <div class="faq-item bg-white rounded-lg shadow-sm">
-        <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-dark">
-          <span><span class="text-primary mr-2">3</span> How do we measure content's on sales and revenue?</span>
-          <span class="faq-icon text-primary transition-transform duration-300 text-xl">+</span>
-        </button>
-        <div class="faq-answer px-6 pb-4">
-          <p class="text-text-body text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-      </div>
-      <!-- FAQ 4 -->
-      <div class="faq-item bg-white rounded-lg shadow-sm">
-        <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-dark">
-          <span><span class="text-primary mr-2">4</span> Pain these cases are perfectly simple and easy to distinguish.</span>
-          <span class="faq-icon text-primary transition-transform duration-300 text-xl">+</span>
-        </button>
-        <div class="faq-answer px-6 pb-4">
-          <p class="text-text-body text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Blog / News Section -->
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <p class="section-subtitle">News & Updates</p>
-      <h2 class="section-title">Featured News and Updates</h2>
-      <p class="text-text-body max-w-2xl mx-auto">We work with your company to identify position requirements, implement recruitment programs, and initiate employee assessments that maximize recruitment efforts</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Blog 1 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-        <div class="h-48 overflow-hidden bg-gray-200">
-          <img src="images/blog-image-9.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-3 text-xs text-text-body mb-3">
-            <span class="text-primary font-semibold">Arrise</span>
-            <span>28 Jun, 2024</span>
-          </div>
-          <h4 class="font-bold text-dark text-lg mb-2 hover:text-primary transition">
-            <a href="#">Hello world!</a>
-          </h4>
-          <p class="text-text-body text-sm mb-4">Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
-          <a href="#" class="text-primary font-semibold text-sm hover:text-primary-dark transition">Read More →</a>
-        </div>
-      </div>
-      <!-- Blog 2 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-        <div class="h-48 overflow-hidden bg-gray-200">
-          <img src="images/blog-image-7.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-3 text-xs text-text-body mb-3">
-            <span class="text-primary font-semibold">Arrise</span>
-            <span>8 Oct, 2021</span>
-          </div>
-          <h4 class="font-bold text-dark text-lg mb-2 hover:text-primary transition">
-            <a href="#">Why Should Business Payroll Outsourcing?</a>
-          </h4>
-          <p class="text-text-body text-sm mb-4">How well this mistaken ideas off denouncing pleasure & praisings will give you complete.</p>
-          <a href="#" class="text-primary font-semibold text-sm hover:text-primary-dark transition">Read More →</a>
-        </div>
-      </div>
-      <!-- Blog 3 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-        <div class="h-48 overflow-hidden bg-gray-200">
-          <img src="images/blog-image-9.jpg" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-3 text-xs text-text-body mb-3">
-            <span class="text-primary font-semibold">Arrise</span>
-            <span>8 Oct, 2021</span>
-          </div>
-          <h4 class="font-bold text-dark text-lg mb-2 hover:text-primary transition">
-            <a href="#">How to Handle Employee With Works</a>
-          </h4>
-          <p class="text-text-body text-sm mb-4">How well this mistaken ideas off denouncing pleasure & praisings will give you complete.</p>
-          <a href="#" class="text-primary font-semibold text-sm hover:text-primary-dark transition">Read More →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section class="py-12 bg-gray-light relative">
-  <div class="absolute inset-0 opacity-[0.13]" style="background-image: url('images/pattern.jpg'); background-size: contain; background-repeat: repeat;"></div>
-  <div class="relative max-w-7xl mx-auto px-4">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <img src="images/subscribe-2.png" alt="Newsletter" class="w-16 h-16">
-        <div>
-          <h3 class="font-spartan font-bold text-dark text-xl">Newsletter</h3>
-          <p class="text-text-body text-sm">Get Updates & Latest News</p>
-        </div>
-      </div>
-      <form class="flex w-full max-w-md">
-        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
-        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-r-lg font-semibold hover:bg-primary-dark transition">Subscribe</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="relative text-white" style="background-image: url('images/footer-bg.jpg'); background-size: cover; background-position: center;">
-  <div class="absolute inset-0 bg-dark/90"></div>
-  <div class="relative pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        <!-- About -->
-        <div>
-          <img src="images/logo-pdf.png" alt="Arrise" class="h-12 mb-4 brightness-0 invert">
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Welcome to Arrise, where we pride ourselves on crafting every customer interaction with a blend of excellence and innovation.
-          </p>
-        </div>
-        <!-- Services -->
-        <div>
-          <h4 class="font-spartan font-bold text-white text-lg mb-4">Services</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Debt management services</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">HR staffing services</a></li>
-          </ul>
-        </div>
-        <!-- Quick Links -->
-        <div>
-          <h4 class="font-spartan font-bold text-white text-lg mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Home</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">About Us</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Career</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-secondary transition text-sm">Contact Us</a></li>
-          </ul>
-        </div>
-        <!-- Contact -->
-        <div>
-          <h4 class="font-spartan font-bold text-white text-lg mb-4">Contact Us</h4>
-          <div class="space-y-3 text-sm text-gray-300">
-            <div>
-              <h6 class="text-white font-semibold text-xs mb-1">Address</h6>
-              <p>Arrise House, 4th Floor, Bhairaav Milestone, Plot No. C-15, Road No 16, Wagle Industrial Estate, Thane (West), Maharashtra, India. Pin Code -400604.</p>
-            </div>
-            <div>
-              <h6 class="text-white font-semibold text-xs mb-1">Mail Us</h6>
-              <a href="mailto:info@arrisebpo.com" class="hover:text-secondary transition">info@arrisebpo.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Copyright -->
-      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-400 text-sm">Copyright © 2024 Arrise.</p>
-        <div class="flex gap-4">
-          <a href="#" class="text-gray-400 hover:text-secondary text-sm transition">Privacy Policy</a>
-        </div>
-      </div>
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-6 text-center">
+      <p class="text-gray-500 text-sm">&copy; 2024 Arrise BPO Solutions Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
 
-<!-- JavaScript -->
+<!-- ========== SCRIPTS ========== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-// Mobile menu toggle
-document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-  document.getElementById('mobile-menu').classList.toggle('hidden');
-});
+  // AOS Init
+  AOS.init({ duration: 800, once: true, offset: 50 });
 
-// Hero Slider
-(function() {
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('.slider-dot');
-  let current = 0;
-  let interval;
+  // Hero Slider
+  (function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+    const total = slides.length;
 
-  function goTo(index) {
-    slides[current].classList.add('opacity-0');
-    slides[current].classList.remove('opacity-100');
-    dots[current].classList.remove('active');
-    current = index;
-    slides[current].classList.remove('opacity-0');
-    slides[current].classList.add('opacity-100');
-    dots[current].classList.add('active');
-  }
+    function showSlide(index) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
 
-  function next() { goTo((current + 1) % slides.length); }
-  function prev() { goTo((current - 1 + slides.length) % slides.length); }
+    function next() {
+      current = (current + 1) % total;
+      showSlide(current);
+    }
 
-  function startAuto() { interval = setInterval(next, 5000); }
-  function stopAuto() { clearInterval(interval); }
+    function prev() {
+      current = (current - 1 + total) % total;
+      showSlide(current);
+    }
 
-  document.querySelector('.slider-next').addEventListener('click', function() { stopAuto(); next(); startAuto(); });
-  document.querySelector('.slider-prev').addEventListener('click', function() { stopAuto(); prev(); startAuto(); });
-  dots.forEach(dot => dot.addEventListener('click', function() { stopAuto(); goTo(+this.dataset.index); startAuto(); }));
+    let interval = setInterval(next, 5000);
 
-  // Init: first slide visible
-  slides[0].classList.add('opacity-100');
-  startAuto();
-})();
+    document.getElementById('nextSlide').addEventListener('click', () => {
+      clearInterval(interval);
+      next();
+      interval = setInterval(next, 5000);
+    });
 
-// FAQ Accordion
-document.querySelectorAll('.faq-toggle').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const item = this.closest('.faq-item');
-    const wasActive = item.classList.contains('active');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-    if (!wasActive) item.classList.add('active');
-  });
-});
+    document.getElementById('prevSlide').addEventListener('click', () => {
+      clearInterval(interval);
+      prev();
+      interval = setInterval(next, 5000);
+    });
+  })();
 
-// Sticky header shadow
-window.addEventListener('scroll', function() {
-  const header = document.getElementById('header');
-  if (window.scrollY > 100) {
-    header.classList.add('shadow-lg');
-  } else {
-    header.classList.remove('shadow-lg');
-  }
-});
+  // Sticky Header
+  (function() {
+    const sticky = document.getElementById('stickyHeader');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 300) {
+        sticky.classList.add('visible');
+      } else {
+        sticky.classList.remove('visible');
+      }
+      lastScroll = scrollTop;
+    });
+  })();
+
+  // Mobile Menu
+  (function() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('closeMenu');
+    hamburger.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+    close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+  })();
+
+  // Counter Animation
+  (function() {
+    const counters = document.querySelectorAll('.counter');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = +el.dataset.target;
+          const duration = 2000;
+          const step = target / (duration / 16);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              el.textContent = target.toLocaleString();
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(current).toLocaleString();
+            }
+          }, 16);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+  })();
+
+  // Arrise comparison slider
+  (function() {
+    const slides = document.querySelectorAll('.arrise-slide');
+    let current = 0;
+    function show(i) {
+      slides.forEach(s => s.style.display = 'none');
+      slides[i].style.display = 'block';
+    }
+    show(0);
+    document.getElementById('arriseNext').addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      show(current);
+    });
+    document.getElementById('arrisePrev').addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      show(current);
+    });
+    setInterval(() => { current = (current + 1) % slides.length; show(current); }, 5000);
+  })();
 </script>
 </body>
 </html>
