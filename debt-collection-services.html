@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Collection Services – Dignity Solutions</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind Output -->
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="relative z-50">
+  <div class="bg-white py-4">
+    <div class="container-main">
+      <nav class="flex items-center justify-between">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[200px]">
+          </a>
+        </div>
+        <!-- Desktop Nav -->
+        <ul class="hidden lg:flex items-center gap-1">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="relative group">
+            <a href="#" class="nav-link active flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+            <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <li><a href="debt-collection-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+              <li><a href="hr-staffing-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav-link">About Us</a></li>
+          <li><a href="#" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link">Contact Us</a></li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden flex flex-col gap-[5px] cursor-pointer" id="hamburger">
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Header -->
+<div class="sticky-header" id="stickyHeader">
+  <div class="container-main py-3">
+    <nav class="flex items-center justify-between">
+      <a href="index.html"><img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[150px]"></a>
+      <ul class="hidden lg:flex items-center gap-1">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="nav-link active flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+          <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <li><a href="debt-collection-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+            <li><a href="hr-staffing-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-white z-[1000] translate-x-full transition-transform duration-300" id="mobileMenu">
+  <div class="flex justify-end p-4">
+    <button id="closeMenu" class="text-2xl text-dark">&times;</button>
+  </div>
+  <ul class="flex flex-col items-center gap-4 mt-10">
+    <li><a href="index.html" class="text-lg font-medium text-dark">Home</a></li>
+    <li><a href="debt-collection-services.html" class="text-lg font-medium text-dark">Debt Management</a></li>
+    <li><a href="hr-staffing-services.html" class="text-lg font-medium text-dark">HR Staffing</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">About Us</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Careers</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- ========== PAGE BANNER ========== -->
+<section class="relative flex items-center justify-center min-h-[350px]" style="background: linear-gradient(135deg, rgba(20,29,56,0.9), rgba(71,57,142,0.85)), url('images/banner_4.jpg') center/cover no-repeat;">
+  <div class="container-main text-center py-20" data-aos="fade-up">
+    <h1 class="font-spartan text-white text-[36px] md:text-[48px] font-bold leading-tight mb-4">360° Approach to Debt Management</h1>
+    <p class="text-white/80 text-lg md:text-xl max-w-3xl mx-auto">Digital Innovation, Call Center Expertise, and Field Operations Across South India!</p>
+  </div>
+</section>
+
+<!-- ========== INTRODUCTION SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section" data-aos="fade-up">
+      <div class="heading_text">Debt Management Services</div>
+      <p class="description_text">Dignity Solutions offers comprehensive debt management services designed to maximize recovery while maintaining positive customer relationships. Our integrated approach combines digital innovation, experienced call center operations, and strategic field presence across South India to deliver outstanding results for our clients.</p>
+    </div>
+
+    <div class="mt-12 max-w-4xl mx-auto" data-aos="fade-up">
+      <h3 class="font-spartan text-dark text-[24px] md:text-[28px] font-bold mb-4">Efficient and professional debt recovery solutions</h3>
+      <p class="text-text-body leading-relaxed">Our approach to debt recovery is built on a foundation of professionalism, compliance, and customer-centric engagement. We employ a multi-channel strategy that includes <strong>Soft Collections</strong> through digital outreach and reminders, <strong>Live Collections</strong> via trained tele-calling professionals, <strong>Skip Collections</strong> through advanced tracing techniques, and <strong>Field Collections</strong> with dedicated on-ground executives. This comprehensive methodology ensures maximum recovery rates while preserving customer dignity and regulatory compliance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4-STEP PROCESS SECTION ========== -->
+<section class="py-20 bg-gray-light">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Our <span class="text-primary">Collection</span> Process</div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Step 01 -->
+      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="0">
+        <div class="text-primary font-spartan text-[48px] font-bold leading-none mb-4">01</div>
+        <h3 class="font-spartan text-dark text-xl font-bold mb-3">Pre-Delinquent Management</h3>
+        <p class="text-text-body text-sm leading-relaxed">Prevent potential delinquencies with proactive engagement and support for customers before they miss payments.</p>
+      </div>
+      <!-- Step 02 -->
+      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-primary font-spartan text-[48px] font-bold leading-none mb-4">02</div>
+        <h3 class="font-spartan text-dark text-xl font-bold mb-3">Early-Stage Collections</h3>
+        <p class="text-text-body text-sm leading-relaxed">For accounts that have just entered delinquency, prompt outreach through digital channels and call center solutions.</p>
+      </div>
+      <!-- Step 03 -->
+      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-primary font-spartan text-[48px] font-bold leading-none mb-4">03</div>
+        <h3 class="font-spartan text-dark text-xl font-bold mb-3">Mid-Stage Collections</h3>
+        <p class="text-text-body text-sm leading-relaxed">Negotiating repayment plans and offering tailored solutions with combination of digital, call center, and field interventions.</p>
+      </div>
+      <!-- Step 04 -->
+      <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-primary font-spartan text-[48px] font-bold leading-none mb-4">04</div>
+        <h3 class="font-spartan text-dark text-xl font-bold mb-3">Late-Stage Collections</h3>
+        <p class="text-text-body text-sm leading-relaxed">Focused recovery efforts including field visits and escalated contact strategies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRODUCTS WE SERVE ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Products We <span class="text-primary">Serve</span></div>
+      <p class="description_text">We provide specialized debt management services across a wide range of financial products.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="0">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Agri Loans & Tractor Loans</h4>
+        <p class="text-text-body text-sm">Recovery solutions for agricultural and tractor financing with rural area coverage.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="50">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Commercial & Passenger Vehicle Loans</h4>
+        <p class="text-text-body text-sm">Comprehensive collections for commercial vehicles, passenger cars, and fleet financing.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="100">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Home & Affordable Housing Loans</h4>
+        <p class="text-text-body text-sm">Sensitive recovery for home loan and affordable housing finance delinquencies.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="150">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Consumer Durable Loans</h4>
+        <p class="text-text-body text-sm">Efficient recovery for consumer durable and electronics financing products.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="200">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Gold Loans</h4>
+        <p class="text-text-body text-sm">Specialized collections for gold loan portfolios with compliance-driven processes.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="250">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Personal Loans</h4>
+        <p class="text-text-body text-sm">Multi-channel recovery for unsecured personal loan delinquencies.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="300">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Business Loans</h4>
+        <p class="text-text-body text-sm">Tailored recovery strategies for SME and business loan portfolios.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="350">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Mortgage Loans</h4>
+        <p class="text-text-body text-sm">Professional recovery for mortgage and property-backed loan products.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="400">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Microfinance Loans</h4>
+        <p class="text-text-body text-sm">Community-aware collection strategies for microfinance and group lending.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="450">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Credit Card</h4>
+        <p class="text-text-body text-sm">High-volume tele-calling and field collections for credit card delinquencies.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="500">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Two-Wheeler Loans</h4>
+        <p class="text-text-body text-sm">Efficient recovery for two-wheeler financing with extensive field coverage.</p>
+      </div>
+      <div class="bg-gray-light rounded-lg p-6 hover:shadow-lg transition-all border-l-4 border-primary" data-aos="fade-up" data-aos-delay="550">
+        <h4 class="font-spartan text-dark font-bold text-lg mb-2">Buy Now, Pay Later (BNPL)</h4>
+        <p class="text-text-body text-sm">Digital-first recovery for BNPL products with automated outreach capabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNER SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(rgba(20,29,56,0.9), rgba(20,29,56,0.9)), url('images/pattern.jpg') center/cover;">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text !text-white">Partner with Dignity Solutions for <span class="text-primary">Seamless</span> Debt Management</div>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4" data-aos="fade-up">
+      <!-- Accordion Item 1 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-users text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Experienced Workforce with Seasoned Professionals</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">Our team comprises seasoned professionals with extensive experience in debt recovery, trained in negotiation, compliance, and customer handling to deliver optimal results.</p>
+        </div>
+      </div>
+      <!-- Accordion Item 2 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-shield-halved text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Regulatory Compliance and Adherence</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">We maintain strict adherence to RBI guidelines, fair practice codes, and all regulatory requirements to protect both our clients and their customers.</p>
+        </div>
+      </div>
+      <!-- Accordion Item 3 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-layer-group text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Comprehensive Collection Channels</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">From digital outreach and tele-calling to field visits and skip-tracing, we offer a complete suite of collection channels tailored to each stage of delinquency.</p>
+        </div>
+      </div>
+      <!-- Accordion Item 4 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-handshake text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Tailored Solutions & End-to-End Ownership</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">We take complete ownership of the collection lifecycle, delivering customized strategies aligned with your portfolio characteristics and business objectives.</p>
+        </div>
+      </div>
+      <!-- Accordion Item 5 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-line text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Advanced Analytical Insights & Reporting</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">Our daily productivity reports, segmentation analytics, and performance dashboards provide transparent visibility into collection operations and outcomes.</p>
+        </div>
+      </div>
+      <!-- Accordion Item 6 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden">
+        <button class="accordion-btn w-full flex items-center justify-between p-5 text-left" onclick="this.parentElement.classList.toggle('open')">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-building text-primary"></i>
+            <span class="text-white font-spartan font-semibold text-lg">Centralized Support Functions</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-white/60 transition-transform"></i>
+        </button>
+        <div class="accordion-content px-5 pb-5 hidden">
+          <p class="text-gray-300 text-sm leading-relaxed pl-9">Centralized training, quality assurance, HR, and compliance functions ensure consistent service delivery across all our operational locations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT FORM SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(135deg, #47398E 0%, #BA1B81 100%);">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <h2 class="font-spartan text-white text-[32px] md:text-[38px] font-bold leading-tight mb-6">Ready to Optimize Your Debt Recovery Operations?</h2>
+        <p class="text-white/80 mb-8">Partner with Dignity Solutions for professional, compliant, and results-driven collections across South India.</p>
+        <a href="mailto:admin@dignitysolutions.in" class="inline-block bg-white text-primary px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider hover:bg-gray-100 transition-all">Contact Us Today</a>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="images/reach-us-2.png" alt="Reach Us" class="max-w-full rounded-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="relative pt-16 pb-8" style="background: linear-gradient(rgba(20,29,56,0.95), rgba(20,29,56,0.95)), url('images/footer-bg.jpg') center/cover;">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1: About -->
+      <div>
+        <img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[200px] mb-6 brightness-0 invert">
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Welcome to Dignity Solutions, where we pride ourselves on professional debt recovery services with a blend of expertise and commitment to our clients.</p>
+        <div class="flex gap-3">
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+        </div>
+      </div>
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="debt-collection-services.html" class="text-gray-400 text-sm hover:text-primary transition">Debt Management Services</a></li>
+          <li><a href="hr-staffing-services.html" class="text-gray-400 text-sm hover:text-primary transition">HR Staffing Services</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-gray-400 text-sm hover:text-primary transition">Home</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">About Us</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Career</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Contact Info</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">No.46, 3rd floor, 6th Cross, 6th Block, 100 Feet Rd, Koramangala, Bengaluru, Karnataka 560095</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-primary mt-1"></i>
+            <a href="mailto:admin@dignitysolutions.in" class="text-gray-400 text-sm hover:text-primary transition">admin@dignitysolutions.in</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">Contact us for inquiries</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-6 text-center">
+      <p class="text-gray-500 text-sm">Copyright &copy; 2024 Dignity Solutions.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 50 });
+
+  // Sticky Header
+  (function() {
+    const sticky = document.getElementById('stickyHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        sticky.classList.add('visible');
+      } else {
+        sticky.classList.remove('visible');
+      }
+    });
+  })();
+
+  // Mobile Menu
+  (function() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('closeMenu');
+    hamburger.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+    close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+  })();
+
+  // Accordion
+  (function() {
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle('hidden');
+        btn.querySelector('.fa-chevron-down').style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

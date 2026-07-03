@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Staffing Services – Dignity Solutions</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind Output -->
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="relative z-50">
+  <div class="bg-white py-4">
+    <div class="container-main">
+      <nav class="flex items-center justify-between">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[200px]">
+          </a>
+        </div>
+        <!-- Desktop Nav -->
+        <ul class="hidden lg:flex items-center gap-1">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="relative group">
+            <a href="#" class="nav-link active flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+            <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <li><a href="debt-collection-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+              <li><a href="hr-staffing-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav-link">About Us</a></li>
+          <li><a href="#" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link">Contact Us</a></li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden flex flex-col gap-[5px] cursor-pointer" id="hamburger">
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+          <span class="w-6 h-[2px] bg-dark transition-all"></span>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Header -->
+<div class="sticky-header" id="stickyHeader">
+  <div class="container-main py-3">
+    <nav class="flex items-center justify-between">
+      <a href="index.html"><img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[150px]"></a>
+      <ul class="hidden lg:flex items-center gap-1">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="relative group">
+          <a href="#" class="nav-link active flex items-center gap-1">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+          <ul class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <li><a href="debt-collection-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">Debt Management Services</a></li>
+            <li><a href="hr-staffing-services.html" class="block px-5 py-2 text-sm text-dark hover:text-primary hover:bg-gray-50">HR Staffing Services</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-white z-[1000] translate-x-full transition-transform duration-300" id="mobileMenu">
+  <div class="flex justify-end p-4">
+    <button id="closeMenu" class="text-2xl text-dark">&times;</button>
+  </div>
+  <ul class="flex flex-col items-center gap-4 mt-10">
+    <li><a href="index.html" class="text-lg font-medium text-dark">Home</a></li>
+    <li><a href="debt-collection-services.html" class="text-lg font-medium text-dark">Debt Management</a></li>
+    <li><a href="hr-staffing-services.html" class="text-lg font-medium text-dark">HR Staffing</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">About Us</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Careers</a></li>
+    <li><a href="#" class="text-lg font-medium text-dark">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- ========== PAGE BANNER ========== -->
+<section class="relative flex items-center justify-center min-h-[350px]" style="background: linear-gradient(135deg, rgba(20,29,56,0.9), rgba(186,27,129,0.8)), url('images/hire.jpg') center/cover no-repeat;">
+  <div class="container-main text-center py-20" data-aos="fade-up">
+    <h1 class="font-spartan text-white text-[36px] md:text-[48px] font-bold leading-tight mb-4">Simplify Workforce Management with Expert HR Staffing Solutions</h1>
+    <p class="text-white/80 text-lg md:text-xl max-w-3xl mx-auto">Effortless hire-to-retire and payroll solutions for effective manpower outsourcing.</p>
+  </div>
+</section>
+
+<!-- ========== INTRODUCTION SECTION ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section" data-aos="fade-up">
+      <div class="heading_text">HR Staffing Services</div>
+      <p class="description_text">Navigating the complexities of workforce management can be challenging. At Dignity Solutions, we simplify this journey with end-to-end HR staffing solutions that cover the entire employee lifecycle — from talent acquisition and onboarding through payroll management, employee engagement, and all the way to retirement planning. Our expert team ensures your workforce operations run smoothly so you can focus on growing your business.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICE AREAS TABS ========== -->
+<section class="py-20 bg-gray-light">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Our <span class="text-primary">Service</span> Areas</div>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+      <button class="tab-btn active px-6 py-3 rounded-full text-sm font-semibold transition-all bg-primary text-white" data-tab="tab1">Talent Acquisition</button>
+      <button class="tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all bg-white text-dark hover:bg-primary hover:text-white" data-tab="tab2">Employee Engagement</button>
+      <button class="tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all bg-white text-dark hover:bg-primary hover:text-white" data-tab="tab3">Compensation & Benefits</button>
+      <button class="tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all bg-white text-dark hover:bg-primary hover:text-white" data-tab="tab4">Succession Planning</button>
+      <button class="tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all bg-white text-dark hover:bg-primary hover:text-white" data-tab="tab5">Offboarding & Exit</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="max-w-4xl mx-auto">
+      <div class="tab-content active" id="tab1" data-aos="fade-up">
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <h3 class="font-spartan text-dark text-2xl font-bold mb-6">Talent Acquisition & Onboarding</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-magnifying-glass text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Strategic Hiring</h4>
+              <p class="text-text-body text-sm">Data-driven recruitment strategies to identify and attract the right talent for your organization.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-user-plus text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Smooth Onboarding</h4>
+              <p class="text-text-body text-sm">Structured onboarding programs that accelerate new hire productivity and improve retention.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-file-contract text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Compliance & Documentation</h4>
+              <p class="text-text-body text-sm">Complete documentation, background verification, and regulatory compliance management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="tab2">
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <h3 class="font-spartan text-dark text-2xl font-bold mb-6">Employee Engagement & Development</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-chart-bar text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Performance Management</h4>
+              <p class="text-text-body text-sm">Goal-setting, performance reviews, and continuous feedback systems to drive productivity.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-graduation-cap text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Learning & Development</h4>
+              <p class="text-text-body text-sm">Training programs, skill development workshops, and career growth pathways for employees.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-heart text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Employee Well-being</h4>
+              <p class="text-text-body text-sm">Wellness initiatives, work-life balance programs, and employee satisfaction surveys.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="tab3">
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <h3 class="font-spartan text-dark text-2xl font-bold mb-6">Compensation & Benefits Management</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-indian-rupee-sign text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Payroll Services</h4>
+              <p class="text-text-body text-sm">Accurate and timely payroll processing, tax calculations, and statutory compliance.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-gift text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Benefits Administration</h4>
+              <p class="text-text-body text-sm">Insurance, leave management, and comprehensive employee benefits program administration.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-piggy-bank text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Retirement Planning</h4>
+              <p class="text-text-body text-sm">PF, gratuity, and pension fund management with complete regulatory compliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="tab4">
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <h3 class="font-spartan text-dark text-2xl font-bold mb-6">Succession & Retirement Planning</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-sitemap text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Succession Planning</h4>
+              <p class="text-text-body text-sm">Identifying and developing future leaders to ensure business continuity and smooth transitions.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-umbrella-beach text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Retirement Services</h4>
+              <p class="text-text-body text-sm">Comprehensive retirement planning, documentation, and smooth transition support for retiring employees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="tab5">
+        <div class="bg-white rounded-xl p-8 shadow-md">
+          <h3 class="font-spartan text-dark text-2xl font-bold mb-6">Offboarding & Exit Management</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-comments text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Exit Interviews</h4>
+              <p class="text-text-body text-sm">Structured exit interviews to gather insights and improve organizational retention strategies.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-file-invoice-dollar text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Retirement/Pension Planning</h4>
+              <p class="text-text-body text-sm">Full & final settlement, pension documentation, and gratuity processing.</p>
+            </div>
+            <div class="text-center p-4">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-arrows-turn-to-dots text-primary text-xl"></i></div>
+              <h4 class="font-spartan font-bold text-dark mb-2">Knowledge Transfer</h4>
+              <p class="text-text-body text-sm">Systematic knowledge transfer processes to preserve institutional knowledge during transitions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HIRE TO RETIRE SERVICES ========== -->
+<section class="py-20 bg-white">
+  <div class="container-main">
+    <div class="heading-section mb-14" data-aos="fade-up">
+      <div class="heading_text">Hire to Retire <span class="text-primary">Services</span></div>
+      <p class="description_text">End-to-end workforce lifecycle management designed to simplify your HR operations.</p>
+    </div>
+
+    <div class="space-y-8 max-w-5xl mx-auto">
+      <!-- Service 1 -->
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-user-tie text-secondary text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="font-spartan text-dark text-xl font-bold mb-3">Talent Acquisition & Onboarding</h3>
+          <p class="text-text-body leading-relaxed">Our talent acquisition team leverages industry networks, job platforms, and data-driven sourcing to find the best candidates. Once hired, our structured onboarding ensures new employees are productive from day one with proper documentation, compliance verification, and integration into your company culture.</p>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-people-group text-secondary text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="font-spartan text-dark text-xl font-bold mb-3">Employee Engagement & Development</h3>
+          <p class="text-text-body leading-relaxed">We design and implement employee engagement programs that boost morale, productivity, and retention. Our learning & development initiatives include skills training, leadership development, and continuous performance management systems that align individual growth with organizational goals.</p>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-money-check-dollar text-secondary text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="font-spartan text-dark text-xl font-bold mb-3">Compensation & Benefits Management</h3>
+          <p class="text-text-body leading-relaxed">From accurate payroll processing and tax compliance to comprehensive benefits administration, we handle the full spectrum of compensation management. Our services include PF/ESI management, insurance administration, leave tracking, and statutory compliance across all applicable labor laws.</p>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-arrow-up-right-dots text-secondary text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="font-spartan text-dark text-xl font-bold mb-3">Succession & Retirement Planning</h3>
+          <p class="text-text-body leading-relaxed">We help organizations build robust succession pipelines by identifying high-potential employees and developing them for future leadership roles. Our retirement planning services ensure employees transition smoothly with proper pension documentation, gratuity processing, and post-retirement benefits management.</p>
+        </div>
+      </div>
+      <!-- Service 5 -->
+      <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-right-from-bracket text-secondary text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="font-spartan text-dark text-xl font-bold mb-3">Offboarding & Exit Management</h3>
+          <p class="text-text-body leading-relaxed">Our offboarding process ensures a dignified and compliant exit experience. We manage exit interviews, knowledge transfer documentation, full & final settlements, experience letter generation, and alumni network management to maintain positive employer branding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNER SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(rgba(20,29,56,0.9), rgba(20,29,56,0.9)), url('images/pattern.jpg') center/cover;">
+  <div class="container-main">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <h2 class="font-spartan text-white text-[28px] md:text-[34px] font-bold leading-tight mb-6">Partner With Us For Comprehensive Solutions</h2>
+        <p class="text-gray-300 mb-8">Let Dignity Solutions handle your workforce management so you can focus on what matters most — growing your business.</p>
+        <ul class="list-check">
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Tailored talent acquisition</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Comprehensive workforce solutions</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Streamlined processes</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Expert Support</span></li>
+          <li><span class="icon-bx"><i class="fa fa-check-circle"></i></span><span class="text-gray-200">Digital tools for enhanced employee experience</span></li>
+        </ul>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="images/hire.jpg" alt="HR Staffing" class="rounded-lg shadow-xl w-full max-w-md">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT FORM SECTION ========== -->
+<section class="py-20 relative" style="background: linear-gradient(135deg, #47398E 0%, #BA1B81 100%);">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <h2 class="font-spartan text-white text-[32px] md:text-[38px] font-bold leading-tight mb-6">Ready to Streamline Your HR Operations?</h2>
+        <p class="text-white/80 mb-8">Partner with Dignity Solutions for end-to-end workforce management that drives efficiency and growth.</p>
+        <a href="mailto:admin@dignitysolutions.in" class="inline-block bg-white text-primary px-8 py-4 rounded-md font-semibold text-sm uppercase tracking-wider hover:bg-gray-100 transition-all">Contact Us Today</a>
+      </div>
+      <div class="flex justify-center" data-aos="fade-up">
+        <img src="images/reach-us-2.png" alt="Reach Us" class="max-w-full rounded-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="relative pt-16 pb-8" style="background: linear-gradient(rgba(20,29,56,0.95), rgba(20,29,56,0.95)), url('images/footer-bg.jpg') center/cover;">
+  <div class="container-main">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1: About -->
+      <div>
+        <img src="images/dignity-logo.png" alt="Dignity Solutions" class="w-[200px] mb-6 brightness-0 invert">
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Welcome to Dignity Solutions, where we pride ourselves on professional debt recovery services with a blend of expertise and commitment to our clients.</p>
+        <div class="flex gap-3">
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="#" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+        </div>
+      </div>
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="debt-collection-services.html" class="text-gray-400 text-sm hover:text-primary transition">Debt Management Services</a></li>
+          <li><a href="hr-staffing-services.html" class="text-gray-400 text-sm hover:text-primary transition">HR Staffing Services</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-gray-400 text-sm hover:text-primary transition">Home</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">About Us</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Career</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-primary transition">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="text-white font-spartan text-lg font-bold mb-6">Contact Info</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">No.46, 3rd floor, 6th Cross, 6th Block, 100 Feet Rd, Koramangala, Bengaluru, Karnataka 560095</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-primary mt-1"></i>
+            <a href="mailto:admin@dignitysolutions.in" class="text-gray-400 text-sm hover:text-primary transition">admin@dignitysolutions.in</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-primary mt-1"></i>
+            <span class="text-gray-400 text-sm">Contact us for inquiries</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-6 text-center">
+      <p class="text-gray-500 text-sm">Copyright &copy; 2024 Dignity Solutions.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 50 });
+
+  // Sticky Header
+  (function() {
+    const sticky = document.getElementById('stickyHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        sticky.classList.add('visible');
+      } else {
+        sticky.classList.remove('visible');
+      }
+    });
+  })();
+
+  // Mobile Menu
+  (function() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('closeMenu');
+    hamburger.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+    close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+  })();
+
+  // Tabs
+  (function() {
+    const btns = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => { b.classList.remove('active', 'bg-primary', 'text-white'); b.classList.add('bg-white', 'text-dark'); });
+        btn.classList.add('active', 'bg-primary', 'text-white');
+        btn.classList.remove('bg-white', 'text-dark');
+        contents.forEach(c => c.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
